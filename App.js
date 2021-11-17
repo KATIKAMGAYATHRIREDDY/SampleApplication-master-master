@@ -37,11 +37,11 @@ const Tabs = () => {
               
 
             tabBarShowLabel: false,
-
+            keyboardHidesTabBar: true,
+            
             tabBarStyle: {
 
             position:'absolute',
-
             height: '7%',
 
             width:'90%',

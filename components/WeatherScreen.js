@@ -12,6 +12,7 @@ import {
   TextInput,
   ActivityIndicator
 } from "react-native"
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 const Dev_Height = Dimensions.get("window").height
 const Dev_Width = Dimensions.get("window").width
@@ -60,7 +61,9 @@ export default class App extends React.Component{
 
   render(){
     return(
-    <SafeAreaView style={styles.container}>
+    
+    <SafeAreaView  style={styles.container} >
+     
       <StatusBar translucent={true} backgroundColor="#000"/>
       <ImageBackground source={require('..//assets/background.webp')} 
       style={styles.Image_Background_Style}>
@@ -92,7 +95,7 @@ export default class App extends React.Component{
           </View>
         </View>
       </ImageBackground>
-      
+     
     </SafeAreaView>
     )
   }
@@ -101,7 +104,8 @@ export default class App extends React.Component{
 const styles = StyleSheet.create({
   container:{
     height:Dev_Height,
-    width: Dev_Width
+    width: Dev_Width,
+    
   },
   Image_Background_Style:{
     height:"100%",
